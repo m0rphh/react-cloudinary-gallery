@@ -2,4 +2,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+   min-height: 100vh;
+   background-color: #000;
+   background-image: radial-gradient( #888, #333);
 }
+.masonry-grid {
+
+   /* width: 100%; */
+}
+.gallery {
+  /* width: 1200px; */
+  /* width: 100%; */
+  /* margin: auto; */
+  /* display: flex; */
+  /* justify-content: center; */
+}
+.gallery > div {
+  /* margin: auto; */
+
+}
+/* .gallery > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery>div .responsive{
+  margin: 3px;
+ } */
+/* .gallery>div .responsive img{
+  width: 300px;
+  height: 200px;
+ } */

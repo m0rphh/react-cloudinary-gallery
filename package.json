@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "cloudinary": "^1.9.1",
-    "cloudinary-react": "^1.0.4",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "axios": "^0.18.0",
+    "cloudinary": "^1.11.0",
+    "cloudinary-react": "^1.0.6",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-mason": "^1.1.2",
+    "react-photo-gallery": "^6.0.25",
     "react-scripts": "1.0.17"
   },
   "scripts": {

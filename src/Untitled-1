@@ -29,9 +29,9 @@ class Main extends Component {
 			   this.setState({gallery: res.data.resources});
 		   });
    }
-	// handleClick() {
-	// 	console.log('img', this.state.gallery[1]);
-	// }
+	handleClick() {
+		console.log('img', this.state.gallery[1]);
+	}
 
 	render(){
 		return (
@@ -43,30 +43,32 @@ class Main extends Component {
 			//         </button>
 			//     </div>
 				<div className="gallery">
-				<CloudinaryContext cloudName="dj6ppswvb">
 					<Masonry>
+				<CloudinaryContext cloudName="dj6ppswvb">
 					   {
 						   this.state.gallery.map(data => {
 							   return (
 								   <div className="responsive" key={data.public_id}>
+									    <div className="img">
 										   {/* <a target="_blank" href={`https://res.cloudinary.com/dj6ppswvb/image/upload/${data.public_id}.jpg`}> */}
 											   <Image onClick={() => this.handleClick()} publicId={data.public_id}>
 												   <Transformation
 													   crop="scale"
 													   width="400"
 													  //  height="200"
-													  //  dpr="auto"
+													   dpr="auto"
 													//    responsive_placeholder="blank"
 												   />
 											   </Image>
 										   {/* </a> */}
 										   {/* <div className="desc">Created at {data.created_at}</div> */}
+									    </div>
 								   </div>
 							   )
 						   })
 					   }
-					 </Masonry>
 				   </CloudinaryContext>
+					 </Masonry>
 				   <div className="clearfix"></div>
 			   </div>
 			// </div>
