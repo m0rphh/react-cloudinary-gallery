@@ -14,7 +14,7 @@ class Main extends Component {
 	 }
 	 uploadWidget() {
 	   let _this = this;
-		 window.cloudinary.openUploadWidget({ cloud_name: 'dj6ppswvb', upload_preset: 'ztpqftef', tags:['b']},
+		 window.cloudinary.openUploadWidget({ cloud_name: 'cloud-name', upload_preset: 'preset-name', tags:['tag']},
 			 function(error, result) {
 				 console.log(result);
 				 // Update gallery state with newly uploaded image
@@ -23,11 +23,12 @@ class Main extends Component {
 	 }
 	 componentDidMount() {
 	   // Request for images tagged xmas
-	   axios.get('https://res.cloudinary.com/dj6ppswvb/image/list/b.json')
+	   axios.get('api-url')
 		   .then(res => {
 			  //  console.log(res.data.resources);
 			   this.setState({gallery: res.data.resources});
 		   });
+
    }
 	// handleClick() {
 	// 	console.log('img', this.state.gallery[1]);
@@ -42,18 +43,19 @@ class Main extends Component {
 			//             Add Image
 			//         </button>
 			//     </div>
-				<div className="gallery">
+				<div className="gallery" >
 				<CloudinaryContext cloudName="dj6ppswvb">
 					<Masonry>
 					   {
 						   this.state.gallery.map(data => {
 							   return (
 								   <div className="responsive" key={data.public_id}>
-										   {/* <a target="_blank" href={`https://res.cloudinary.com/dj6ppswvb/image/upload/${data.public_id}.jpg`}> */}
+										   {/* <a target="_blank" href={``}> */}
 											   <Image onClick={() => this.handleClick()} publicId={data.public_id}>
 												   <Transformation
-													   crop="scale"
-													   width="400"
+
+														 width='400'
+													   crop = "scale"
 													  //  height="200"
 													  //  dpr="auto"
 													//    responsive_placeholder="blank"

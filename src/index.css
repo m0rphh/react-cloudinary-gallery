@@ -11,6 +11,7 @@ body {
    /* width: 100%; */
 }
 .gallery {
+  padding: 0 100px 0 100px;
   /* width: 1200px; */
   /* width: 100%; */
   /* margin: auto; */
@@ -18,8 +19,8 @@ body {
   /* justify-content: center; */
 }
 .gallery > div {
-  /* margin: auto; */
-
+  /* max-width: 1200px;
+  margin: auto; */
 }
 /* .gallery > div {
   display: flex;
